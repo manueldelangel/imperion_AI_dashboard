@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+
+}.title{
+    color: rgb(10, 9, 9);
+
+}
+
+.content{
+    flex: 6;
+    background-color: rgb(255, 231, 231);
+    
+}
