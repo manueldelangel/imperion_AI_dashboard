@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const {Server} = require('socket.io');
 const cors = require('cors');
 const http = require('http')
+const Output = require('./models/Experiment');
 
 
 //---------Middlewares--------//
@@ -39,11 +40,10 @@ const io = new Server(server,{
 
 io.on("connection", (socket) =>{
     console.log(socket.id);
-    socket.on("send_message", ()=>{
-        console.log("message_emited")
-        socket.broadcast.emit("receive_message")
-    })
-    })
+    Output.watch().on("change", (data) => {
+        socket.emit("message_added", data);
+    });
+});
 
 server.listen(5000, () =>{
     console.log('Server started');

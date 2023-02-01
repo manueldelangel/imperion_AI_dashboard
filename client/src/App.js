@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import {themeSettings} from "theme"
 import Dashboard from "scenes/dashboard"
 import Layout from "scenes/layout"
+import Table from "scenes/table"
+// import BarChart from "scenes/chart";
 
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Navigate to= "/dashboard" replace />} />
-              <Route path="/dashboard" element={<Dashboard />} />+
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/Table" element={<Table />} />
+              {/* <Route path="/chart" element={<Barchart />} /> */}
 
               
             </Route>

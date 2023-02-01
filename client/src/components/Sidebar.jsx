@@ -46,7 +46,7 @@ import {
       icon: null,
     },
     {
-      text: "Products",
+      text: "Table",
       icon: <ShoppingCartOutlined />,
     },
     {

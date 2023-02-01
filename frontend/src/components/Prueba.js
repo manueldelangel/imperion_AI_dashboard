@@ -213,7 +213,9 @@ function getText(value){
                 {datos ? 
             
                     <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 1000 }} aria-label="simple table">
+
+                    
+                    <Table sx={{ minWidth: 1000, backgroundColor: 'transparent'}} aria-label="simple table">
                     <TableHead>
                         <TableRow>
                         <TableCell></TableCell>
