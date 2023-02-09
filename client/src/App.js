@@ -7,8 +7,7 @@ import {themeSettings} from "theme"
 import Dashboard from "scenes/dashboard"
 import Layout from "scenes/layout"
 import Table from "scenes/table"
-// import BarChart from "scenes/chart";
-
+import Bar from "scenes/chart";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -24,7 +23,7 @@ function App() {
               <Route path="/" element={<Navigate to= "/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/Table" element={<Table />} />
-              {/* <Route path="/chart" element={<Barchart />} /> */}
+              <Route path="/chart" element={<Bar />} />
 
               
             </Route>

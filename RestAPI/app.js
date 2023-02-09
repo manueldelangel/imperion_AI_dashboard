@@ -38,12 +38,12 @@ const io = new Server(server,{
 });
 
 
-io.on("connection", (socket) =>{
-    console.log(socket.id);
-    Output.watch().on("change", (data) => {
-        socket.emit("message_added", data);
-    });
-});
+// io.on("connection", (socket) =>{
+//     console.log(socket.id);
+//     Output.watch().on("change", (data) => {
+//         socket.emit("message_added", data);
+//     });
+// });
 
 server.listen(5000, () =>{
     console.log('Server started');
